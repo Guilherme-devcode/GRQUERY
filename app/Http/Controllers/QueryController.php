@@ -4,9 +4,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Models\Consulta;
+
+use App\Models\Medico;
+
 class QueryController extends Controller
 {
    public function index(){
-       return view('home');
+
+       $consultas=Consulta::all();
+
+       return view('dashboard', ['consultas'=>$consultas]);
    }
 }

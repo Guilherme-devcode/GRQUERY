@@ -52,28 +52,9 @@
                         <li class="nav-item">
                             <a class="nav-link text-white" href="#">Consultas</a>
                         </li>
-                        @auth
                             <li class="nav-item">
                                 <a class="nav-link text-white" href="/dashboard">Tabela de consultas</a>
                             </li>
-                            <li class="nav-item">
-                                <form action="/logout" method="POST">
-                                    @csrf
-                                    <a href="/logout" class="nav-link text-white" onclick="event.preventDefault();
-                  this.closest('form').submit();">
-                                        Sair
-                                    </a>
-                                </form>
-                            </li>
-                        @endauth
-                        @guest
-                            <li class="nav-item">
-                                <a class="nav-link text-white" href="/login">Entrar</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-white" href="/register">Cadastrar</a>
-                            </li>
-                        @endguest
                         <li class="nav-item">
                             <a class="nav-link text-white" href="#">Contato</a>
                         </li>
